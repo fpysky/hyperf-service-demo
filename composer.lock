@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c0e3efef93a58c0b4152f23d8ee71bf",
+    "content-hash": "1aaa704980572a4a0fa7cbae01416d48",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -401,6 +401,50 @@
                 "source": "https://github.com/php-fig/http-message-util/tree/1.1.5"
             },
             "time": "2020-11-24T22:02:12+00:00"
+        },
+        {
+            "name": "google/protobuf",
+            "version": "v3.21.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/protocolbuffers/protobuf-php.git",
+                "reference": "70649d33d2b6e8fd0db6d9b6fffc7f46f01f1438"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/70649d33d2b6e8fd0db6d9b6fffc7f46f01f1438",
+                "reference": "70649d33d2b6e8fd0db6d9b6fffc7f46f01f1438",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=5.0.0"
+            },
+            "suggest": {
+                "ext-bcmath": "Need to support JSON deserialization"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Google\\Protobuf\\": "src/Google/Protobuf",
+                    "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "proto library for PHP",
+            "homepage": "https://developers.google.com/protocol-buffers/",
+            "keywords": [
+                "proto"
+            ],
+            "support": {
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.21.5"
+            },
+            "time": "2022-08-09T19:53:56+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -1742,6 +1786,115 @@
             "time": "2022-05-24T13:10:54+00:00"
         },
         {
+            "name": "hyperf/grpc",
+            "version": "v2.2.33",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/grpc.git",
+                "reference": "1d51c61711bdc2a2d0fb40e07f3f0566a9169d67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/grpc/zipball/1d51c61711bdc2a2d0fb40e07f3f0566a9169d67",
+                "reference": "1d51c61711bdc2a2d0fb40e07f3f0566a9169d67",
+                "shasum": ""
+            },
+            "require": {
+                "google/protobuf": "^3.6.1",
+                "php": ">=7.2"
+            },
+            "suggest": {
+                "ext-protobuf": "For better performance, install the protobuf C extension."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Grpc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A GRPC basic library for Hyperf.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "gRPC",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "time": "2022-05-24T13:10:54+00:00"
+        },
+        {
+            "name": "hyperf/grpc-server",
+            "version": "v2.2.33",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/grpc-server.git",
+                "reference": "3f917e230682d72684ac0dba8c90f4ac07b9e5cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/grpc-server/zipball/3f917e230682d72684ac0dba8c90f4ac07b9e5cb",
+                "reference": "3f917e230682d72684ac0dba8c90f4ac07b9e5cb",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/di": "~2.2.0",
+                "hyperf/grpc": "~2.2.0",
+                "hyperf/http-message": "~2.2.0",
+                "hyperf/http-server": "~2.2.0",
+                "hyperf/utils": "~2.2.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\GrpcServer\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\GrpcServer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A GRPC Server for Hyperf.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "gRPC",
+                "grpc-server",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "time": "2022-05-24T13:10:54+00:00"
+        },
+        {
             "name": "hyperf/guzzle",
             "version": "v2.2.33",
             "source": {
@@ -2363,6 +2516,56 @@
             "time": "2022-05-24T13:10:54+00:00"
         },
         {
+            "name": "hyperf/nacos",
+            "version": "v2.2.33",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/nacos.git",
+                "reference": "79809d2546b3f749024d518c2f840fca8157e688"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/nacos/zipball/79809d2546b3f749024d518c2f840fca8157e688",
+                "reference": "79809d2546b3f749024d518c2f840fca8157e688",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.5|^7.0",
+                "hyperf/contract": "~2.2.0",
+                "hyperf/utils": "~2.2.0",
+                "php": ">=7.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\Nacos\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Nacos\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Nacos SDK",
+            "keywords": [
+                "hyperf",
+                "nacos",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf/nacos/issues",
+                "source": "https://github.com/hyperf/nacos/tree/v2.2.33"
+            },
+            "time": "2022-05-24T13:10:54+00:00"
+        },
+        {
             "name": "hyperf/pool",
             "version": "v2.2.33",
             "source": {
@@ -2806,31 +3009,25 @@
             "time": "2022-05-24T13:10:54+00:00"
         },
         {
-            "name": "hyperf/service-governance-consul",
+            "name": "hyperf/service-governance-nacos",
             "version": "v2.2.33",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hyperf/service-governance-consul.git",
-                "reference": "3f0514dd68dffbd0250edac433fa33e248dd4316"
+                "url": "https://github.com/hyperf/service-governance-nacos.git",
+                "reference": "daafa6b2d6634fd92468d1cd7eea38bbdcb94f07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/service-governance-consul/zipball/3f0514dd68dffbd0250edac433fa33e248dd4316",
-                "reference": "3f0514dd68dffbd0250edac433fa33e248dd4316",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/hyperf/service-governance-nacos/zipball/daafa6b2d6634fd92468d1cd7eea38bbdcb94f07",
+                "reference": "daafa6b2d6634fd92468d1cd7eea38bbdcb94f07",
+                "shasum": ""
             },
             "require": {
-                "hyperf/consul": "~2.2.0",
                 "hyperf/contract": "~2.2.0",
+                "hyperf/nacos": "~2.2.0",
                 "hyperf/service-governance": "~2.2.0",
                 "hyperf/utils": "~2.2.0",
-                "php": ">=7.3"
+                "php": ">=7.2"
             },
             "type": "library",
             "extra": {
@@ -2838,23 +3035,23 @@
                     "dev-master": "2.2-dev"
                 },
                 "hyperf": {
-                    "config": "Hyperf\\ServiceGovernanceConsul\\ConfigProvider"
+                    "config": "Hyperf\\ServiceGovernanceNacos\\ConfigProvider"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Hyperf\\ServiceGovernanceConsul\\": "src/"
+                    "Hyperf\\ServiceGovernanceNacos\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "A consul adapter for service governance.",
+            "description": "A nacos adapter for service governance.",
             "homepage": "https://hyperf.io",
             "keywords": [
-                "consul-adapter",
                 "hyperf",
+                "nacos-adapter",
                 "php",
                 "service-governance",
                 "swoole"
@@ -8841,6 +9038,7 @@
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.4",
+        "ext-http": "*",
         "ext-json": "*",
         "ext-redis": "*"
     },

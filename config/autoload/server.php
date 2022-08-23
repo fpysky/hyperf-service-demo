@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Hyperf\JsonRpc\HttpServer;
 use Hyperf\Server\Event;
 use Hyperf\Server\Server;
 use Swoole\Constant;
@@ -11,13 +10,13 @@ return [
     'mode' => SWOOLE_PROCESS,
     'servers' => [
         [
-            'name' => 'jsonrpc-http',
+            'name' => 'grpc',
             'type' => Server::SERVER_HTTP,
             'host' => '0.0.0.0',
-            'port' => (int) env('JSON_RPC_PORT', 9504),
+            'port' => (int) env('DOCKER_HOST_PORT', 9503),
             'sock_type' => SWOOLE_SOCK_TCP,
             'callbacks' => [
-                Event::ON_REQUEST => [HttpServer::class, 'onRequest'],
+                Event::ON_REQUEST => [\Hyperf\GrpcServer\Server::class, 'onRequest'],
             ],
         ],
     ],
